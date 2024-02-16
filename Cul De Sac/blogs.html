@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cul De Sac - Neighborhood</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #cfcab3; /* Earthy homie background color */
+            color: #594e38; /* Earthy homie text color */
+        }
+
+        header {
+            background-color: #594e38; /* Earthy homie header background color */
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #cfcab3; /* Header text color */
+        }
+
+        nav {
+            background-color: #e0dbc1; /* Earthy homie navigation background color */
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #594e38; /* Navigation text color */
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #594e38; /* Earthy homie footer background color */
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            color: #cfcab3; /* Footer text color */
+        }
+
+        .blog-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .blog-form textarea {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .blog-form button {
+            background-color: #594e38;
+            color: #cfcab3;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .blog-post {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Cul De Sac</h1>
+    </header>
+
+    <nav>
+        <div>
+            <a href="#buy">Buy</a>
+            <a href="#menu">Menu</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="messages.html">Messages</a>
+        </div>
+        <div>
+            <a href="index.html">Go back to home</a> <!-- Moved link to the right -->
+        </div>
+    </nav>
+
+    <section id="blogs-section">
+        <h2>Neighborhood Blogs</h2>
+        <div class="blog-form">
+            <textarea id="blogContent" placeholder="Write your blog post here..."></textarea>
+            <button onclick="publishBlog()">Publish</button>
+        </div>
+        <!-- Display existing blog content here (dummy content for demonstration) -->
+        <div class="blog-post">
+            <h3>Blog Post Title</h3>
+            <p>This is a sample blog post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>This local community website makes you feel at home. Connect with neighbors, share updates, and create a sense of community in Cul De Sac.</p>
+    </footer>
+
+    <script>
+        function publishBlog() {
+            // This is a placeholder function for demonstration
+            const blogContent = document.getElementById('blogContent').value;
+            const blogPost = document.createElement('div');
+            blogPost.classList.add('blog-post');
+            blogPost.innerHTML = `
+                <h3>New Blog Post</h3>
+                <p>${blogContent}</p>
+            `;
+            document.getElementById('blogs-section').appendChild(blogPost);
+        }
+    </script>
+</body>
+
+</html>
